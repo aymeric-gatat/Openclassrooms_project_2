@@ -1,0 +1,545 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+}
+
+/*==================== Header ====================*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    height: 120px;
+    margin: 0px 40px;
+}
+
+header img {
+    width: 110px;
+    height: auto;
+}
+
+nav {
+    width: 400px;
+    height: 100px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+nav ul li {
+    position: relative;
+    height: 80px;
+}
+
+nav ul li:hover::before {
+    position: absolute;
+    content: "";
+    width: 120%;
+    height: 3px;
+    background-color: #0065FC;
+    top: -10px;
+    left: -10%;
+}
+
+nav ul a {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+nav ul a:hover {
+    transform: scale(1.1);
+    color: #0065FC;
+}
+
+
+
+/*====================== Main ===================*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 3%;
+}
+
+/*Titre*/
+
+main .entete {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+}
+
+main .titre {
+    margin: 5px 0;
+}
+
+main .titre h1 {
+    font-size: 28px;
+}
+
+main .titre p {
+    font-size: 16px;
+    color: #555;
+    margin: -5px 0;
+}
+
+/*Barre Recherche*/
+
+main .recherche {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 300px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+main .recherche .fa-solid {
+    height: 10px;
+    width: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px 10px 13px;
+    background-color: #F2F2F2;
+    border-radius: 10px 0 0 10px;
+}
+
+main .recherche input {
+    width: 200px;
+    height: 30px;
+    border: 1px solid #F2F2F2;
+    padding-left: 10px;
+}
+
+main .recherche input::placeholder {
+    color: #000;
+    font-size: 14px;
+}
+
+main .recherche button {
+    font-size: 14px;
+    background-color: #0065FC;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    height: 30px;
+}
+
+main .recherche button span {
+    font-size: 14px;
+    color: white;
+}
+
+main .recherche button .fa-solid {
+    display: none;
+}
+
+main .recherche button:active {
+    background-color: #033b91;
+}
+
+/*Filtres Barre */
+
+.filtre_barre {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.filtre_barre .filtre_titre {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.filtre_barre .filtres_bloc {
+    display: flex;
+    flex-flow: row wrap;
+    height: 30px;
+}
+
+.filtre_barre .filtres {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 30px;
+    border: 2px solid #F2F2F2;
+    border-radius: 30px;
+    padding: 0 10px 0 30px;
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.filtre_barre .filtres .fa-solid {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #0065FC;
+    background-color: #DEEBFF;
+    border-radius: 100px;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    left: -10px;
+}
+
+.filtres {
+    cursor: pointer;
+}
+
+.filtres input[type="checkbox"] {
+    display: none;
+}
+
+.filtres:hover .fa-solid {
+    color: #fff;
+    background-color: #033b91;
+}
+
+/*info*/
+main .info {
+    display: flex;
+    align-items: baseline;
+    width: 800px;
+    height: 30px;
+    margin: 20px 0;
+}
+
+main .info .fa-solid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0065FC;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    border: 1px solid #BBB;
+    border-radius: 100%;
+}
+
+main .info p {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 2px;
+}
+
+/*====================== SECTION ====================*/
+
+.bloc {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/*====================== HEBERGEMENT ==================*/
+
+.hebergement {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 66%;
+    height: 650px;
+    background-color: #F2F2F2;
+    padding: 15px 30px;
+    border-radius: 20px;
+}
+
+.hebergement h2 {
+    margin-bottom: 20px;
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+.containeur {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+.containeur_medium {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    height: 220px;
+    overflow: hidden;
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.containeur img {
+    border-radius: 20px 20px 0px 0px;
+    overflow: hidden;
+    height: 65%;
+    object-fit: cover;
+}
+
+.hebergement .containeur .containeur_medium .text {
+    margin-left: 10px;
+}
+
+.hebergement .containeur_medium h3 {
+    font-size: 16px;
+}
+
+.hebergement .more {
+    position: relative;
+    font-size: 18px;
+    font-weight: 800;
+    margin-left: 20px;
+    width: 118px;
+}
+
+.hebergement .more:hover::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    left: 0;
+    top: 30px;
+    border-radius: 3px;
+}
+
+/*================= LES PLUS POPULAIRES ====================*/
+
+.bloc aside {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+    height: 650px;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    padding: 15px 10px;
+}
+
+.bloc aside .titre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+}
+
+.bloc aside .titre .bx
+
+/*petite etoile*/
+    {
+    font-size: 28px;
+}
+
+.containeur_petit {
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
+    background-color: #FFF;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.containeur_petit img {
+    border-radius: 20px 0px 0px 20px;
+    overflow: hidden;
+    width: 30%;
+    height: 130px;
+    object-fit: cover;
+}
+
+.containeur_petit .text {
+    width: 60%;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.containeur_petit .text h3 {
+    font-size: 16px;
+}
+
+/*Etoiles*/
+.rating .fa-solid {
+    color: #0065FC;
+}
+
+.rating .grey {
+    color: #E2E2E2;
+}
+
+/*=========================== ACTIVITES ========================*/
+
+#activite {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin: 100px 0;
+    padding: 30px 0;
+}
+
+.activite h2 {
+    font-size: 22px;
+}
+
+#activite .containeur {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-flow: column wrap;
+}
+
+#activite .containeur_act {
+    width: 22%;
+    background-color: #FFF;
+    border-radius: 20px;
+}
+
+.containeur_medium,
+.containeur_petit,
+#activite .containeur_act {
+    box-shadow: 0px 5px 10px 1px #BBB;
+}
+
+#activite h4 {
+    padding: 5px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+#activite .grand img {
+    width: 100%;
+    height: 485px;
+    object-fit: cover;
+}
+
+#activite .medium img {
+    width: 100%;
+    height: 250px;
+}
+
+#activite .petit img {
+    width: 100%;
+    height: 150px;
+}
+
+/*hover*/
+
+#activite .containeur_act:hover,
+.containeur_petit:hover,
+.containeur_medium:hover {
+    transform: scale(1.05);
+}
+
+#activite .containeur_act,
+.containeur_petit,
+.containeur_medium {
+    transition: .2s ease-in transform;
+}
+
+/*========================================================*/
+/*=================== FOOTER ====================*/
+
+footer {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    width: 100%;
+    height: 200px;
+    background-color: #F2F2F2;
+    padding: 30px 0;
+}
+
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+footer li {
+    margin: 10px 0;
+}
+
+footer h4 {
+    font-size: 16px;
+}
+
+footer a {
+    font-size: 16px;
+    transition: .3s ease-in-out color;
+}
+
+footer a:hover {
+    color: #0065FC;
+}
+
+/*==========================================================*/
+/*========================= Animation ======================*/
+
+@keyframes filtres_animation {
+    0% {
+        width: 25px;
+    }
+
+    50% {
+        width: 100%;
+        color: #fff;
+        background-color: #0065FC;
+    }
+
+    100% {
+        width: 25px;
+        color: #fff;
+        background-color: #0065FC;
+    }
+}
+
+.filtres input[type="checkbox"]:checked~i {
+    animation: filtres_animation 0.7s ease both;
+}
+
+/*animation barre bleu*/
+@keyframes nav_before {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 120%;
+    }
+}
+
+header nav ul li:hover::before {
+    animation: .8s nav_before ease both;
+}
